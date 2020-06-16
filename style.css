@@ -1,0 +1,167 @@
+.principal {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+ 
+  h1 {
+    font-size: 22px;
+    color:#feda4a;
+    text-align: center;
+    font-family:  'Pathway Gothic One', sans-serif; 
+}
+
+#perguntas{
+    color: #000;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: bold;
+}  
+  .letrinhasMalucas {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: -25px;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    z-index: 1;
+  }
+  
+  .star {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 400px;
+    text-align: justify;
+  }
+  
+  .letrinhasMalucas {
+    position: relative;
+    top: 99999px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+  }
+  
+  .rasteja > .titulo{
+    font-size: 90%;
+    text-align: center;
+  }
+  
+  .star > .titulo h1 {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+  }
+  
+  @keyframes crawl {
+      0% {
+      top: -100px;
+      transform: rotateX(20deg)  translateZ(0);
+    }
+      100% { 
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
+  
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+  }
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+  
+  body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/ceu.gif");
+  }
+  img {
+    border: 1px solid red;
+    width: 100%;
+}
+
+  body.correct {
+    --hue: var(--hue-correct);
+  }
+  
+  body.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: #ffffff57;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #feda4a;
+    background-color: #000000;
+    outline: none;
+    font-family: 'Pathway Gothic One', sans-serif;
+  }
+  
+  .btn:hover {
+    border-color: #fff;
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: #37d40e;
+  }
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #feda4a;
+    background-color: #000000;
+    border: #feda4a;
+    /*background-color: #fff;*/
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
